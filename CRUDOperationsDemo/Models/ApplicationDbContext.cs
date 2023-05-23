@@ -1,11 +1,11 @@
 ﻿using CURDOprationsDimo.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CRUDOperationsDemo
+namespace CRUDOperationsDemo.Models
 {
-    public class CRUDDbContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public CRUDDbContext(DbContextOptions<CRUDDbContext> options) : base(options)   
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
 
         }

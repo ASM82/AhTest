@@ -1,4 +1,4 @@
-﻿using CRUDOperationsDemo;
+﻿using CRUDOperationsDemo.Models;
 using CURDOprationsDimo.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -7,10 +7,10 @@ namespace CURDOprationsDimo.Controllers
 {
     public class EmployeesController : Controller
     {
-        private readonly CRUDDbContext _context;
+        private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment env;
 
-        public EmployeesController(CRUDDbContext context,IWebHostEnvironment env)
+        public EmployeesController(ApplicationDbContext context,IWebHostEnvironment env)
         {
             _context = context;
             this.env = env;

@@ -1,11 +1,11 @@
-using CRUDOperationsDemo;
+using CRUDOperationsDemo.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<CRUDDbContext>(option=>
+builder.Services.AddDbContext<ApplicationDbContext>(option=>
 option.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionDb")));
 //builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
